@@ -10,7 +10,6 @@ load_dotenv()
 
 def main():
     app = Flask(__name__)
-
     app.config["MONGO_URI"] = os.getenv("MONGO_URI")
     mongo.init_app(app)
     app.add_url_rule(
